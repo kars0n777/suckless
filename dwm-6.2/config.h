@@ -61,11 +61,11 @@ static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = dmenucmd } },
-	{ MODKEY, 	                XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,		        XK_Return, spawn,          {.v = dmenucmd } },
+	{ MODKEY, 	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,      {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
-	/*{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },*/
+	/*{ MODKEY,                     XK_k,      focusstack,     {.i = -1 } },*/
 /*	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },*/
 /*	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },*/
 	{ MODKEY,                       XK_a,      setmfact,       {.f = -0.05} },
@@ -80,10 +80,10 @@ static Key keys[] = {
 	{ MODKEY,	                    XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-/*	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },*/
+	{ MODKEY,                       XK_z,  focusmon,       {.i = -1 } },
 /*	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },*/
 /*	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },*/
-/*	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },*/
+	{ MODKEY,                       XK_x, tagmon,         {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
