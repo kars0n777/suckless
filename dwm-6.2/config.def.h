@@ -2,16 +2,21 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
+static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "SourceCodePro-Medium:size=10" };
 static const char dmenufont[]       = "SourceCodePro-Medium:size=10";
 static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#ffb86c";
+static const char col_gray2[]       = "#bd93f9";
 static const char col_gray3[]       = "#ff79c6";
-static const char col_gray4[]       = "#ffb86c";
+static const char col_gray4[]       = "#bd93f9";
 static const char col_cyan[]        = "#282a36";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -42,6 +47,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -77,6 +83,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },
 /*	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },*/
 /*	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },*/
+/*	{ MODKEY|ControlMask,		    XK_comma,  cyclelayout,    {.i = -1 } },*/
+	{ MODKEY|ShiftMask,             XK_f,      cyclelayout,    {.i = +1 } },
 /*	{ MODKEY,                       XK_o, 	   setlayout,      {0} },*/
 	{ MODKEY,	                    XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -85,8 +93,8 @@ static Key keys[] = {
 /*	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },*/
 /*	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },*/
 	{ MODKEY,                       XK_x,      tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -4 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -97,7 +105,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_w,                      6)
 	TAGKEYS(                        XK_e,                      7)
 	TAGKEYS(                        XK_r,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} }, 
+	{ MODKEY|ShiftMask,             XK_Escape, quit,           {0} }, 
 };
 
 /* button definitions */ 
@@ -116,4 +124,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
