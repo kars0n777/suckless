@@ -11,8 +11,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "SourceCodePro-Medium:size=10" };
-static const char dmenufont[]       = "SourceCodePro-Medium:size=10";
+static const char *fonts[]          = { "LiberationMono-Regular:size=10" };
+static const char dmenufont[]       = "LiberationMono-Regular:size=10";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#bd93f9";
 static const char col_gray3[]       = "#ff79c6";
@@ -64,13 +64,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,		        XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY, 	                    XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_BackSpace, togglebar,      {0} },
+	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
 	/*{ MODKEY,                     XK_k,      focusstack,     {.i = -1 } },*/
 /*	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },*/
