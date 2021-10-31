@@ -1,4 +1,4 @@
-**These are my suckless builds. I've only modified dwm and slstatus, but these are mainly so I can pull them down from github** 
+**These are my suckless builds. I've only modified dwm, st, and slstatus, but these are mainly so I can pull them down from github** 
 
 - These are my suckless builds for dmenu, dwm, slstatus and st
 - I am new to suckless software so any help would be appreciated

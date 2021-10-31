@@ -45,7 +45,6 @@ static const char unknown_str[] = "n/a";
  * ram_total           total memory size in GB         NULL
  * ram_used            used memory in GB               NULL
  * run_command         custom shell command            command (echo foo)
- * separator           string to echo                  NULL
  * swap_free           free swap in GB                 NULL
  * swap_perc           swap usage in percent           NULL
  * swap_total          total swap size in GB           NULL
@@ -59,11 +58,15 @@ static const char unknown_str[] = "n/a";
  * uptime              system uptime                   NULL
  * username            username of current user        NULL
  * vol_perc            OSS/ALSA volume in percent      mixer file (/dev/mixer)
- *                                                     NULL on OpenBSD
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	//{ datetime, "%s",           "%F %T" },
+	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
+    { netspeed_rx, " %sB/s  ", "eth0" },
+	{ cpu_perc, " CPU  %s%% ",  },
+	{ ram_perc, " RAM  %s%% ",  },
+	{ datetime, " %s","%a %r  ",  },
 };
