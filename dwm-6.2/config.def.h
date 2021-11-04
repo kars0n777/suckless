@@ -33,8 +33,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "discord",     NULL,    NULL,       2,            0,           1 },
-	{ "element-desktop", NULL, NULL,      1,            0,           1 },
+	{ "discord",     NULL,    NULL,       1,            0,           1 },
+	{ "element-desktop", NULL, NULL,      2,            0,           1 },
 };
 
 /* layout(s) */
@@ -64,11 +64,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		        XK_Return, spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,		        XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY, 	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
