@@ -75,6 +75,7 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_Return, togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
+	{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
 	/*{ MODKEY,                     XK_k,      focusstack,     {.i = -1 } },*/
 /*	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },*/
 /*	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },*/
@@ -83,11 +84,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 /*	{ MODKEY,                       XK_Tab,    view,           {0} },*/
 	{ MODKEY,                       XK_c,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },
+/*	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },*/
 /*	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },*/
-/*	{ MODKEY|ControlMask,		    XK_comma,  cyclelayout,    {.i = -1 } },*/
-/*	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },*/
+	{ MODKEY|ShiftMask,	    	    XK_f,      cyclelayout,    {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_f,      cyclelayout,    {.i = +1 } },
 /*	{ MODKEY,                       XK_o, 	   setlayout,      {0} },*/
 /*	{ MODKEY,	                    XK_f,      togglefloating, {0} },*/
 	{ MODKEY,                       XK_s,      view,           {.ui = ~0 } },
@@ -98,7 +99,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_z,      tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = -4 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 10 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
