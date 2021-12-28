@@ -65,9 +65,11 @@ static const struct arg args[] = {
 	/* function format          argument */
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
-    { netspeed_rx, " [ %sB/s] ", "enp4s0" },
-	{ cpu_perc, " [CPU  %s%%] ",  },
-	{ ram_perc, " [RAM  %s%%] ",  },
-	{ datetime, " [ %s", "%b %d %I:%M%p] ", },
-/*	{ datetime, " [ %s", "%I:%M%p] ", }, */
+    { netspeed_rx, "[ %sB/s] ", "enp4s0" },           /* change "enp4s0" to your internet interface */ 
+	{ cpu_perc, "[ %s%%] ",  },
+	{ ram_perc, "[ %s%%",  },
+    { ram_used, ", %s] ",},
+	{ datetime, "[ %s", "%b %d] ", },               /* date & time */
+	{ datetime, "[ %s", "%I:%M%p] ", },                /* date */
+  	{ run_command, "[墳 %2s%]",	"pamixer --get-volume"		},
 };
