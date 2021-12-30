@@ -75,7 +75,7 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_Return, togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
-	{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
+	//{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
 	/*{ MODKEY,                     XK_k,      focusstack,     {.i = -1 } },*/
 /*	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },*/
 /*	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },*/
@@ -97,6 +97,12 @@ static Key keys[] = {
 /*	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },*/
 /*	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },*/
 	{ MODKEY|ShiftMask,             XK_z,      tagmon,         {.i = +1 } },
+	{ Mod1Mask,                     XK_Tab,    viewnext,       {0} },
+	{ Mod1Mask|ShiftMask,           XK_Tab,    viewprev,       {0} },
+	{ MODKEY,                       XK_Tab,    viewnext,       {0} },
+	{ MODKEY|ShiftMask,             XK_Tab,    viewprev,       {0} },
+//	{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
+//	{ MODKEY|ShiftMask,             XK_Left,   tagtoprev,      {0} },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = -4 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },

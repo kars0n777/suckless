@@ -1,15 +1,11 @@
---- dwm.c	2020-07-09 16:49:10.023585649 +0200
-+++ dwm.c	2020-07-09 16:49:43.497542191 +0200
-@@ -1987,9 +1987,11 @@ updatesizehints(Client *c)
- void
- updatestatus(void)
- {
-+	Monitor* m;
- 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
- 		strcpy(stext, "dwm-"VERSION);
--	drawbar(selmon);
-+	for(m = mons; m; m = m->next)
-+		drawbar(m);
- }
- 
- void
+--- dwm.c	2021-10-02 14:22:28.034782413 +0100
++++ dwm.c	2021-10-02 14:27:54.599845767 +0100
+@@ -231,6 +235,8 @@ static void updatetitle(Client *c);
+ static void updatewindowtype(Client *c);
+ static void updatewmhints(Client *c);
+ static void view(const Arg *arg);
++static void viewnext(const Arg *arg);
++static void viewprev(const Arg *arg);
+ static Client *wintoclient(Window w);
+ static Monitor *wintomon(Window w);
+ static int xerror(Display *dpy, XErrorEvent *ee);
