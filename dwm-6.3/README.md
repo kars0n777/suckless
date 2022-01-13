@@ -12,5 +12,5 @@
 * can't see unused tags 
 
 ### things i want to add
-* one tagset for all monitors patch
+* one tagset for all monitors patch (it seems to not compile with the attach below patch)
 * manual scratchpad patch 
