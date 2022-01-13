@@ -1,11 +1,10 @@
---- dwm.c	2021-10-02 14:22:28.034782413 +0100
-+++ dwm.c	2021-10-02 14:27:54.599845767 +0100
-@@ -231,6 +235,8 @@ static void updatetitle(Client *c);
- static void updatewindowtype(Client *c);
- static void updatewmhints(Client *c);
- static void view(const Arg *arg);
-+static void viewnext(const Arg *arg);
-+static void viewprev(const Arg *arg);
- static Client *wintoclient(Window w);
- static Monitor *wintomon(Window w);
- static int xerror(Display *dpy, XErrorEvent *ee);
+--- dwm.c
++++ dwm.c
+@@ -262,6 +264,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
+ 	[UnmapNotify] = unmapnotify
+ };
+ static Atom wmatom[WMLast], netatom[NetLast];
++static int restart = 0;
+ static int running = 1;
+ static Cur *cursor[CurLast];
+ static Clr **scheme;
