@@ -5,10 +5,10 @@
 - Alpha (looks n i c e )  
 - Dracula colortheme (except with a black background)
 - scrollback
-	- scroll up with k
-	- scroll down with j 
-	- scroll up fast with alt + k
-	- scroll down fast with alt +j 
+	- scroll up with alt + k
+	- scroll down with alt +j 
+	- scroll up fast with alt + shift + k
+	- scroll down fast with alt + shift + j 
 
 ## Installation
 
