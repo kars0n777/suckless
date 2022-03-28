@@ -1,6 +1,6 @@
 # karson777's slstatus
 
-# Features 
+## Features 
 
 - Network speed 
 - CPU usage percentage
@@ -9,7 +9,7 @@
 - Current Date & Time
 - Current volume using `pamixer`
 
-# Installation
+## Installation
 
 You need to have a `nerd-fonts` font to see icons (or change icons)
 You need to change "eth0" to your network card for `netspeed_rx`

@@ -5,7 +5,7 @@ Some differences are
 - Jetbrains Mono Nerd Font 
 - Apple TTF font for emojis
 
-# From Luke
+## From Luke
 
 Extra stuff added to vanilla dmenu:
 

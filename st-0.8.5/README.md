@@ -1,6 +1,6 @@
 # karson777's st
 
-# Features 
+## Features 
 
 - Alpha (looks n i c e )  
 - Dracula colortheme (except with a black background)
