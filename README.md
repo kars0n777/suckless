@@ -1,4 +1,4 @@
-# karson777's suckless
+# karson777's suckless builds
 
 im a simple man, i like my software simple too
 
