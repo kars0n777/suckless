@@ -7,8 +7,8 @@
 - scrollback
 	- scroll up with k
 	- scroll down with j 
-	- scroll up fast with l
-	- scroll down fast with h 
+	- scroll up fast with alt + k
+	- scroll down fast with alt +j 
 
 ## Installation
 
