@@ -6,7 +6,7 @@ static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"JetBrainsMono Nerd Font-Regular:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"};
+static const char *fonts[]          = {"JetBrainsMono Nerd Font-Regular:size=10", "Apple Color Emoji:pixelsize=16:antialias=true:autohint=true"};
 static const char dmenufont[]       = "JetBrainsMono Nerd Font-Regular:size=10"; 
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#bd93f9";
@@ -27,8 +27,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "steam",     NULL,    NULL,       1,            1,           0 },
+	/* class                  instance    title       tags mask     isfloating   monitor */
+	{ "peek",                    NULL,    NULL,       1,            1,           0 },
 };
 
 /* layout(s) */
@@ -48,7 +48,7 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|Mod1Mask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
