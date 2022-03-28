@@ -1,4 +1,11 @@
-# Luke's dmenu
+# karson777's dmenu 
+This is a fork of Luke Smith's dmenu 
+
+Some differences are 
+- Jetbrains Mono Nerd Font 
+- Apple TTF font for emojis
+
+# From Luke
 
 Extra stuff added to vanilla dmenu:
 
@@ -11,6 +18,6 @@ Extra stuff added to vanilla dmenu:
 
 ## Installation
 
-You must have `libxft-bgra` installed until the libxft upstream is fixed.
+You must have `libxft-bgra`, `nerd-fonts-jetbrains-mono` and `ttf-apple-emoji` installed 
 
 After making any config changes that you want, but `make`, `sudo make install` it.

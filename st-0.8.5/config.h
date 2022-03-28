@@ -204,13 +204,15 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,         	XK_equal,       zoom,           {.f = +2} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -2} },
 	{ ControlMask, 		XK_0,	        zoomreset,      {.f =  0} },
-	{ ControlMask|ShiftMask, XK_C,           clipcopy,       {.i =  0} },
-	{ ControlMask|ShiftMask,              XK_V,           clippaste,      {.i =  0} },
+	{ ControlMask|ShiftMask, XK_C,          clipcopy,      {.i =  0} },
+	{ ControlMask|ShiftMask, XK_V,          clippaste,     {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ControlMask,          XK_k,           kscrollup,      {.i =  1} },
 	{ ControlMask,          XK_j,           kscrolldown,    {.i =  1} },
+	{ ControlMask, 		XK_l,           kscrollup,      {.i =  3} },
+	{ ControlMask,		XK_h,           kscrolldown,    {.i =  3} },
 };
 
 /*

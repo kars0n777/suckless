@@ -1,16 +1,23 @@
-# my dwm 6.3 config
+# karson777's dwm 
 
-### differences
-* no systray
-* less patches
-* no scratchpads
-* updated to dwm 6.3 (obviously)
-    * and the patches i used all worked and only 1 needing to be manually patched
+## features
+- dracula theme with black background 
+- only see active tags
+- fullgaps 
+	- ( looks n i c e )
+- statusallmons for multimonitors
+- cursor warp 
+	- moves your cursor to active window
 
-### features
-* dracula black theme (goes nice with a dark background)
-* can't see unused tags 
+## differences from my 6.2 version 
+- no systray
+- less patches
+- no scratchpads
+- updated to dwm 6.3 (obviously)
+    - and the patches i used all worked and only 1 needing to be manually patched
 
-### things i want to add
-* one tagset for all monitors patch (it seems to not compile with the attach below patch)
-* manual scratchpad patch 
+## Installation
+
+You must have `nerd-fonts-jetbrains-mono` and `ttf-apple-emoji` installed or change the fonts used 
+
+After making any config changes that you want, but `make`, `sudo make install` it.
