@@ -8,11 +8,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {"JetBrainsMono Nerd Font-Regular:size=10", "Apple Color Emoji:pixelsize=16:antialias=true:autohint=true"};
 static const char dmenufont[]       = "JetBrainsMono Nerd Font-Regular:size=10"; 
-static const char col_gray1[]       = "#6272A4";
+static const char col_gray1[]       = "#44475a";
 static const char col_gray2[]       = "#bd93f9";
 static const char col_gray3[]       = "#ff79c6";
 static const char col_gray4[]       = "#bd93f9";
-static const char col_cyan[]        = "#6272A4";
+static const char col_cyan[]        = "#44475a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan  },
