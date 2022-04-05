@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font-Regular:pixelsize=16:antialias=true:autohint=true";
-static char *font2  = "JetBrainsMono Nerd Font-Bold:pixelsize=16:antialias=true:autohint=true";
-static char *font3  = "JetBrainsMono Nerd Font-Italic:pixelsize=16:antialias=true:autohint=true";
-static char *font4  = "JetBrainsMono Nerd Font-Bold Italic:pixelsize=16:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font-Regular:pixelsize=15:antialias=true:autohint=true";
+static char *font2  = "JetBrainsMono Nerd Font-Bold:pixelsize=15:antialias=true:autohint=true";
+static char *font3  = "JetBrainsMono Nerd Font-Italic:pixelsize=15:antialias=true:autohint=true";
+static char *font4  = "JetBrainsMono Nerd Font-Bold Italic:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
