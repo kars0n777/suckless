@@ -1,7 +1,8 @@
 # karson777's dwm 
 
 ## features
-- dracula theme with black background 
+- dracula theme 
+- jetbrainsmono font with nerd icons
 - only see active tags
 - fullgaps 
 	- ( looks n i c e )
