@@ -1,7 +1,7 @@
 # karson777's sent 
 
 ## features
-- dracula theme with black background 
+- dracula theme and fonts 
 
 ## Installation
 
