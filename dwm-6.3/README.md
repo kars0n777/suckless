@@ -9,9 +9,9 @@
 - statusallmons for multimonitors
 - cursor warp 
 	- moves your cursor to active window
+- systray 
 
 ## differences from my 6.2 version 
-- no systray
 - less patches
 - no scratchpads
 - updated to dwm 6.3 (obviously)
