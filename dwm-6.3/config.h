@@ -33,7 +33,14 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                  instance    title       tags mask     isfloating   monitor */
-	{ "peek",                    NULL,    NULL,       1,            1,           0 },
+/*	{ "st", 	                  NULL,    "ncmpcpp",  1,            0,           0 },
+	{ "st", 	                  NULL,    "nvim",     2,            0,           0 },
+	{ "virt-manager",             NULL,    NULL,       3,            0,           0 },
+	{ "qbittorrent",              NULL,    NULL,       4,            0,           0 },
+	{ "kdeconnect-app",           NULL,    NULL,       5,            0,           0 },
+	{ "st", 	                  NULL,    "gomuks",   1,            0,           3 },
+	{ "discord",                  NULL,    NULL,       2,            0,           3 },*/
+	{ "Peak",                     NULL,    NULL,       0,            1,           0 },
 };
 
 /* layout(s) */
