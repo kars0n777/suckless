@@ -3,9 +3,9 @@
 ## Features 
 
 - Alpha (looks n i c e )  
-- Dracula colortheme 
+- Dracula color theme 
 - JetBrainsMono font with Nerd Fonts
-- scrollback
+- Scroll 
 	- scroll up with alt + k
 	- scroll down with alt +j 
 	- scroll up fast with alt + shift + k
