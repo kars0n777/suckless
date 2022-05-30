@@ -66,12 +66,12 @@ static const struct arg args[] = {
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
     //{ run_command, " %2s ", "mocp -Q %title" },
-    { netspeed_rx, " %sB/s ", "eth0" },           /* change "eth0" to your internet interface */ 
-	{ cpu_perc, " %s%% ",  },
+    { netspeed_rx, " %sB/s  ", "eth0" },           /* change "eth0" to your internet interface */ 
+	{ cpu_perc, " %s%%  ",  },
     //{ ram_perc, " %s%%, ",  },
-    { ram_used, " %s ",},
-    { uptime, " %s " },
-	{ datetime, " %s", "%b %d ", },               /* date & time */
-	{ datetime, " %s", "%I:%M%p ", },                /* date */
+    { ram_used, " %s  ",},
+    { uptime, " %s  " },
+	{ datetime, " %s", "%b %d  ", },               /* date & time */
+	{ datetime, " %s", "%I:%M%p  ", },                /* date */
   	{ run_command, "墳 %2s%%",	"pamixer --get-volume"		},
 };
