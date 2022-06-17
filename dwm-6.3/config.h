@@ -41,7 +41,6 @@ static const Rule rules[] = {
 	{ "st", 	              NULL,    "gomuks",   1,            0,           3 },
 	{ "discord",                  NULL,    NULL,       2,            0,           3 },*/
 	{ "Peak",                     NULL,    NULL,       0,            1,           0 },
-	{ "Tor Browser",              NULL,    NULL,       0,            1,           0 },
 };
 
 /* layout(s) */
