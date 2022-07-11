@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -33,7 +33,14 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                  instance    title       tags mask     isfloating   monitor */
-	{ "peek",                    NULL,    NULL,       1,            1,           0 },
+/*	{ "st", 	              NULL,    "ncmpcpp",  1,            0,           0 },
+	{ "st", 	              NULL,    "nvim",     2,            0,           0 },
+	{ "virt-manager",             NULL,    NULL,       3,            0,           0 },
+	{ "qbittorrent",              NULL,    NULL,       4,            0,           0 },
+	{ "kdeconnect-app",           NULL,    NULL,       5,            0,           0 },
+	{ "st", 	              NULL,    "gomuks",   1,            0,           3 },
+	{ "discord",                  NULL,    NULL,       2,            0,           3 },*/
+	{ "Peak",                     NULL,    NULL,       0,            1,           0 },
 };
 
 /* layout(s) */
@@ -75,7 +82,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 /*	{ MODKEY,                       XK_Tab,    view,           {0} },*/
-	{ MODKEY,                       XK_c,      killclient,     {0} },
+	{ MODKEY,             			XK_c,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },
 /*	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },*/
@@ -84,9 +91,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_s,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_z,      focusmon,       {.i = -1 } },
-/*	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },*/
-/*	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },*/
-	{ MODKEY|ShiftMask,             XK_z,      tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_x,      focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_z,      tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_x,      tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = -4 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
@@ -99,11 +106,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_w,                      6)
 	TAGKEYS(                        XK_e,                      7)
 	TAGKEYS(                        XK_r,                      8)
-	TAGKEYS(                        XK_6,                      9)
-	TAGKEYS(                        XK_7,                      10)
-	TAGKEYS(                        XK_8,                      11)
-	TAGKEYS(                        XK_9,                      12)
-	TAGKEYS(                        XK_0,                      13)
 	{ MODKEY|ShiftMask,             XK_Escape, quit,           {0} }, 
 	{ MODKEY|ControlMask|ShiftMask, XK_Escape, quit,           {1} }, 
 };
