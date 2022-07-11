@@ -24,6 +24,21 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_gray2 },
 };
 
+typedef struct {
+	const char *name;
+	const void *cmd;
+} Sp;
+const char *spcmd1[] = {"st", "-n", "scratchpad1", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "scratchpad2", "-g", "120x34", NULL };
+const char *spcmd3[] = {"st", "-n", "scratchpad3", "-g", "120x34", "-e", "nvim", NULL };
+static Sp scratchpads[] = {
+	/* name          cmd  */
+	{"scratchpad1",    spcmd1},
+	{"scratchpad2",    spcmd2},
+	{"scratchpad3",    spcmd3},
+};
+
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -33,14 +48,9 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                  instance    title       tags mask     isfloating   monitor */
-/*	{ "st", 	              NULL,    "ncmpcpp",  1,            0,           0 },
-	{ "st", 	              NULL,    "nvim",     2,            0,           0 },
-	{ "virt-manager",             NULL,    NULL,       3,            0,           0 },
-	{ "qbittorrent",              NULL,    NULL,       4,            0,           0 },
-	{ "kdeconnect-app",           NULL,    NULL,       5,            0,           0 },
-	{ "st", 	              NULL,    "gomuks",   1,            0,           3 },
-	{ "discord",                  NULL,    NULL,       2,            0,           3 },*/
-	{ "Peak",                     NULL,    NULL,       0,            1,           0 },
+	{ NULL,		  "scratchpad1",		NULL,		SPTAG(0),		1,			 -1,			 0 },
+	{ NULL,		  "scratchpad2",		NULL,		SPTAG(1),		1,			 -1,			 0 },
+	{ NULL,		  "scratchpad3",	    NULL,		SPTAG(2),		1,			 -1,			 0 },
 };
 
 /* layout(s) */
@@ -72,6 +82,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,		        XK_Return,  spawn,         {.v = dmenucmd } },
@@ -97,6 +108,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = -4 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
+	{ MODKEY,            			XK_bracketleft,  	   togglescratch,  {.ui = 0 } },
+	{ MODKEY,            			XK_bracketright,	   togglescratch,  {.ui = 1 } },
+	{ MODKEY|ShiftMask,    			XK_bracketleft,	       togglescratch,  {.ui = 2 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -120,7 +134,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
