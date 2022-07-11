@@ -62,7 +62,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "",      tile },    /* first entry is default */
-	{ "",     NULL }, /* no layout function means floating behavior */
+	{ "",      NULL }, /* no layout function means floating behavior */
 	{ "",      monocle },
 };
 
@@ -85,7 +85,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		        XK_Return,  spawn,         {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,		        XK_Return, spawn,         {.v = dmenucmd } },
 	{ MODKEY, 	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
@@ -108,9 +108,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = -4 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
-	{ MODKEY,            			XK_bracketleft,  	   togglescratch,  {.ui = 0 } },
-	{ MODKEY,            			XK_bracketright,	   togglescratch,  {.ui = 1 } },
-	{ MODKEY|ShiftMask,    			XK_bracketleft,	       togglescratch,  {.ui = 2 } },
+	{ Mod1Mask,            			XK_Return,   			   togglescratch,  {.ui = 0 } },
+	{ MODKEY,            			XK_bracketleft,  		   togglescratch,  {.ui = 1 } },
+	{ MODKEY, 		    			XK_bracketright,	       togglescratch,  {.ui = 2 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
