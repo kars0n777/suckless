@@ -109,8 +109,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = +4 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
 	{ Mod1Mask,            			XK_Return,   			   togglescratch,  {.ui = 0 } },
-	{ MODKEY,            			XK_bracketleft,  		   togglescratch,  {.ui = 1 } },
-	{ MODKEY, 		    			XK_bracketright,	       togglescratch,  {.ui = 2 } },
+	{ Mod1Mask,            			XK_Tab, 	   	 		   togglescratch,  {.ui = 1 } },
+	{ Mod1Mask,         			XK_backslash,		       togglescratch,  {.ui = 2 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
