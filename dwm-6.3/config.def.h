@@ -13,10 +13,17 @@ static const char col_gray2[]       = "#bd93f9";
 static const char col_gray3[]       = "#ff79c6";
 static const char col_gray4[]       = "#bd93f9";
 static const char col_cyan[]        = "#282a36";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan  },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_gray2 },
+};
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -63,20 +70,21 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		        XK_Return, spawn,         {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,		        XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY, 	                    XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_y,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_a,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_d,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },
-/*	{ MODKEY,                       XK_Tab,    view,           {0} },*/
+/*	{ MODKEY, 	                    XK_Tab,    view,           {0} },*/
 	{ MODKEY|ShiftMask, 			XK_c,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },
+/*	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },*/
+/*	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },*/
 /*	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },*/
-/*	{ MODKEY,                       XK_o, 	   setlayout,      {0} },*/
-/*	{ MODKEY,	                    XK_f,      togglefloating, {0} },*/
+	{ MODKEY|ShiftMask,             XK_f, 	   setlayout,      {0} },
+/*	{ MODKEY|ShiftMask,	            XK_f,      togglefloating, {0} },*/
 	{ MODKEY,                       XK_s,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_s,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_z,      focusmon,       {.i = -1 } },
