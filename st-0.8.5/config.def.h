@@ -97,12 +97,12 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.7;
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-  [0] = "#000000", /* black   */
+  [0] = "#282a36", /* black   */
   [1] = "#ff5555", /* red     */
   [2] = "#50fa7b", /* green   */
   [3] = "#f1fa8c", /* yellow  */
@@ -112,7 +112,7 @@ static const char *colorname[] = {
   [7] = "#bbbbbb", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#44475a", /* black   */
+  [8]  = "#6272a4", /* black   */
   [9]  = "#ff5555", /* red     */
   [10] = "#50fa7b", /* green   */
   [11] = "#f1fa8c", /* yellow  */
@@ -193,7 +193,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
+#define TERMMOD (Mod1Mask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -201,16 +201,18 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+	{ ControlMask,         	XK_equal,       zoom,           {.f = +2} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -2} },
+	{ ControlMask, 		XK_0,	        zoomreset,      {.f =  0} },
+	{ ControlMask|ShiftMask, XK_C,          clipcopy,      {.i =  0} },
+	{ ControlMask|ShiftMask, XK_V,          clippaste,     {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ Mod1Mask,		XK_k,           kscrollup,      {.i =  1} },
+	{ TERMMOD,		XK_K,           kscrollup,      {.i =  3} },
+	{ Mod1Mask,		XK_j,           kscrolldown,    {.i =  1} },
+	{ TERMMOD,		XK_J,           kscrolldown,    {.i =  3} },
 };
 
 /*

@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 5000;
+const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -63,15 +63,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	//{ datetime, "%s",           "%F %T" },
-	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
-    //{ run_comand, "[ %2s] ", "~/scripts/currentsong.sh" },
-    { netspeed_rx, "[ %sB/s] ", "enp4s0" },           /* change "enp4s0" to your internet interface */ 
-	{ cpu_perc, "[ %s%%] ",  },
-    //{ ram_perc, "[ %s%%, ",  },
-    { ram_used, "[ %s] ",},
-    { uptime, "[ %s] " },
-	{ datetime, "[ %s", "%b %d] ", },               /* date & time */
-	{ datetime, "[ %s", "%I:%M%p] ", },                /* date */
-  	{ run_command, "[墳 %2s%]",	"pamixer --get-volume"		},
+    { netspeed_rx, " %sB/s  ", "eth0" },           /* change "eth0" to your internet interface */ 
+  	{ run_command, "%s", "/home/karson777/scripts/bar/cpu-usage.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/ram-used.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/uptime.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/date.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/time.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/input-mic-status.sh"},
+  	{ run_command, "%s", "/home/karson777/scripts/bar/volume-status.sh"},
 };
