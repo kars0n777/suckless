@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 static char *fontfallbacks[] = {
-	"Montserrat Medium",
+	"JetBrainsMono Nerd Font",
 	"Apple Color Emoji",
 };
 #define NUMFONTSCALES 42
