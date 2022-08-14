@@ -6,8 +6,8 @@ static const unsigned int gappx     = 10;       /* gaps between windows */
 static const unsigned int snap      = 0;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"JetBrainsMono Nerd Font-Regular:size=10", "Apple Color Emoji:pixelsize=16:antialias=true:autohint=true"};
-static const char dmenufont[]       = "JetBrainsMono Nerd Font-Regular:size=10"; 
+static const char *fonts[]          = {"mononoki Nerd Font-Regular:size=10", "Apple Color Emoji:pixelsize=16:antialias=true:autohint=true"};
+static const char dmenufont[]       = "mononoki Nerd Font-Regular:size=10"; 
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#bd93f9";
 static const char col_gray3[]       = "#ff79c6";
@@ -76,7 +76,7 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,         XK_s,      spawn,          {.v = sxhkdcmd} },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_y,      focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_t,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_a,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_d,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },

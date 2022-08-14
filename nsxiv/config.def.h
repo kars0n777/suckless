@@ -13,7 +13,7 @@ static const char *DEFAULT_MARK_COLOR = NULL;  /* NULL means it will default to 
 #if HAVE_LIBFONTS
 static const char *DEFAULT_BAR_BG     = NULL;  /* NULL means it will default to window background */
 static const char *DEFAULT_BAR_FG     = NULL;  /* NULL means it will default to window foreground */
-static const char *DEFAULT_FONT       = "JetBrainsMono Nerd Font-Regular:size=10";
+static const char *DEFAULT_FONT       = "mononoki Nerd Font-Regular:size=10";
 #endif
 
 #endif
