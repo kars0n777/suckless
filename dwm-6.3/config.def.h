@@ -55,7 +55,7 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|Mod1Mask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|Mod1Mask,           	KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
@@ -80,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_d,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },
-/*	{ MODKEY, 	                    XK_Tab,    view,           {0} },*/
+/*	{ Mod1Mask,	                    XK_Tab,    view,           {0} }, */ /* only switches to most recent workspace */ 
 	{ MODKEY|ShiftMask, 			XK_c,      killclient,     {0} },
 /*	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[0]} },*/
 /*	{ MODKEY|Mod1Mask,              XK_f,      setlayout,      {.v = &layouts[1]} },*/
