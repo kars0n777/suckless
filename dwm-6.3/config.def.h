@@ -85,10 +85,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 /*	{ Mod1Mask,	                    XK_Tab,    view,           {0} }, */ /* only switches to most recent workspace */ 
 	{ MODKEY|ShiftMask, 			XK_c,      killclient,     {0} },
-	{ Mod1Mask,              		XK_1,      setlayout,      {.v = &layouts[0]} },
-	{ Mod1Mask,              		XK_2,      setlayout,      {.v = &layouts[1]} },
-	{ Mod1Mask,              		XK_3,      setlayout,      {.v = &layouts[2]} },
-	{ Mod1Mask,              		XK_4,      setlayout,      {.v = &layouts[3]} },
+	{ Mod1Mask|ShiftMask,           XK_1,      setlayout,      {.v = &layouts[0]} },
+	{ Mod1Mask|ShiftMask,           XK_2,      setlayout,      {.v = &layouts[1]} },
+	{ Mod1Mask|ShiftMask,           XK_3,      setlayout,      {.v = &layouts[2]} },
+	{ Mod1Mask|ShiftMask, 			XK_4,      setlayout,      {.v = &layouts[3]} },
 /*	{ MODKEY|ShiftMask,             XK_f, 	   setlayout,      {0} },*/
 /*	{ MODKEY|ShiftMask,	            XK_f,      togglefloating, {0} },*/
 	{ MODKEY,                       XK_s,      view,           {.ui = ~0 } },
