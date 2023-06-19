@@ -207,13 +207,13 @@ static Bool npisrelative  = True;
 #define MODKEY ControlMask 
 static Key keys[] = {
 	/* modifier            key              function     argument */
-	{ MODKEY|ShiftMask,    XK_t,       	focusonce,   { 0 } },
-	{ MODKEY, 	       XK_t,            spawn,       { 0 } },
-	{ MODKEY, 	       XK_Return,            spawn,       { 0 } },
+	/*{ MODKEY|ShiftMask,  XK_t,       	focusonce,   { 0 } },*/
+	{ MODKEY|ShiftMask,    XK_t,            spawn,       { 0 } },
+	{ MODKEY|ShiftMask,    XK_Return,            spawn,       { 0 } },
 
-	{ MODKEY, 	       XK_Tab,            rotate,      { .i = +1 } },
-	{ MODKEY|ShiftMask,    XK_Tab,            rotate,      { .i = -1 } },
-	{ Mod1Mask,	       XK_Tab,            movetab,     { .i = +1 } },
+	{ MODKEY|ShiftMask,    XK_Tab,            rotate,      { .i = +1 } },
+	{ MODKEY|Mod1Mask,     XK_Tab,            rotate,      { .i = -1 } },
+	{ Mod1Mask,	       	   XK_Tab,            movetab,     { .i = +1 } },
 	{ Mod1Mask|ShiftMask,  XK_Tab,            movetab,     { .i = -1 } },
 	/*{ ControlMask,       XK_Tab,         	  rotate,      { .i = 0 } },*/
 
@@ -228,7 +228,7 @@ static Key keys[] = {
 	{ MODKEY,   	       XK_9,            move,        { .i = 8 } },
 	{ MODKEY,   	       XK_0,            move,        { .i = 9 } },
 
-	{ MODKEY, 	       XK_w,            killclient,  { 0 } },
+	{ MODKEY|ShiftMask,    XK_w,            killclient,  { 0 } },
 
 	{ MODKEY,              XK_u,            focusurgent, { 0 } },
 	{ MODKEY|ShiftMask,    XK_u,            toggle,      { .v = (void*) &urgentswitch } },
@@ -237,8 +237,9 @@ static Key keys[] = {
 
 	{ MODKEY|ShiftMask,    XK_comma,        spawn,       SETPROP("_TABBED_SELECT_TAB") },
 
-	{ MODKEY,              XK_b,            showbar,     { .i = 1 } },
-	{ MODKEY,    	       XK_n,            showbar,     { .i = 0 } },
+	{ MODKEY,              XK_Shift_L,      showbar,     { .i = 1 } },
+	{ ShiftMask,           XK_Super_L,      showbar,     { .i = 1 } },
+	{ ControlMask,         XK_comma,        showbar,     { .i = 1 } },
 
 	/* Unique functionality */
 	/*{ MODKEY|ShiftMask,  XK_period,       spawn,       OPENTERMSOFT("_TABBED_SELECT_TERMAPP") },
@@ -255,5 +256,6 @@ static Key keys[] = {
 
 static Key keyreleases[] = {
 	/* modifier            key              function     argument */
-	{ MODKEY|ShiftMask,    XK_Alt_L,      showbar,     { .i = 0 } },
+	{ MODKEY|ShiftMask,    XK_Shift_L,      showbar,     { .i = 0 } },
+	{ MODKEY|ShiftMask,    XK_Super_L,      showbar,     { .i = 0 } },
 };

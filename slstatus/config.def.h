@@ -63,7 +63,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-    { netspeed_rx, " %sB/s  ", "eth0" },           /* change "eth0" to your internet interface */ 
+    { netspeed_rx, "󰀂 %sB/s  ", "eth0" },           /* change "eth0" to your internet interface */ 
   	{ run_command, "%s", "/home/karson777/scripts/bar/cpu-usage.sh"},
   	{ run_command, "%s", "/home/karson777/scripts/bar/ram-used.sh"},
   	{ run_command, "%s", "/home/karson777/scripts/bar/uptime.sh"},
