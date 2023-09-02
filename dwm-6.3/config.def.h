@@ -51,7 +51,9 @@ static const Layout layouts[] = {
 	{ "",      tile },    /* first entry is default */
 	{ "",      NULL }, /* no layout function means floating behavior */
 	{ "",      monocle },
-	{ "",      horizgrid },
+	{ "",      horizgrid },
+	{ "TTT",      bstack },
+	{ "",      bstackhoriz },
 };
 
 /* key definitions */
@@ -89,6 +91,7 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,	            XK_g,      setlayout,      {.v = &layouts[1]} },
 /*	{ Mod1Mask|ShiftMask,           XK_g,      setlayout,      {.v = &layouts[2]} },*/
 	{ MODKEY|ShiftMask, 			XK_g,      setlayout,      {.v = &layouts[3]} },
+	{ Mod1Mask|ShiftMask,			XK_g,	   setlayout,      {.v = &layouts[5]} },
 /*	{ MODKEY|ShiftMask,             XK_f, 	   setlayout,      {0} },*/
 /*	{ MODKEY|ShiftMask,	            XK_f,      togglefloating, {0} },*/
 	{ MODKEY,                       XK_s,      view,           {.ui = ~0 } },
