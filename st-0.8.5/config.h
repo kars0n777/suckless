@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mononoki Nerd Font-Regular:pixelsize=18:antialias=true:autohint=true";
-static char *font2  = "mononoki Nerd Font-Bold:pixelsize=18:antialias=true:autohint=true";
-static char *font3  = "mononoki Nerd Font-Italic:pixelsize=18:antialias=true:autohint=true";
-static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=18:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font-Regular:pixelsize=16:antialias=true:autohint=true";
+static char *font2  = "mononoki Nerd Font-Bold:pixelsize=16:antialias=true:autohint=true";
+static char *font3  = "mononoki Nerd Font-Italic:pixelsize=16:antialias=true:autohint=true";
+static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
