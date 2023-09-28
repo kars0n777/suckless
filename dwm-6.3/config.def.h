@@ -37,6 +37,7 @@ static const Rule rules[] = {
 	/* class                  instance    title       tags mask     isfloating   monitor */
 	{ "rustdesk",	  NULL,			NULL,		0,				1,			 -1 },
 	{ "Rustdesk",	  NULL,			NULL,		0,				1,			 -1 },
+	{ "chatterino",	  NULL,			NULL,		0,				1,			 -1 },
 };
 
 /* layout(s) */
