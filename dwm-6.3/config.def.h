@@ -78,11 +78,13 @@ static const char *sxhkdcmd[]  = { "sxhkd-toggle.sh", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,		        XK_Return, spawn,          {.v = dmenucmd } },
-	{ ControlMask|Mod1Mask,         XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY, 			            XK_Return, spawn,          {.v = termcmd } },
 	{ ControlMask|Mod1Mask,         XK_s,      spawn,          {.v = sxhkdcmd} },
 	{ MODKEY,                       XK_BackSpace, togglebar,   {0} },
 	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
-	{ MODKEY,	            		XK_g,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,	            	XK_g,      focusstack,     {.i = -1 } },
+	{ MODKEY,	            	XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_a,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_d,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },
