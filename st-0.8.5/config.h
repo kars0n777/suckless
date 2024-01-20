@@ -197,22 +197,22 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
-	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ ControlMask,         	XK_equal,       zoom,           {.f = +2} },
-	{ ControlMask,          XK_minus,       zoom,           {.f = -2} },
-	{ ControlMask, 		XK_0,	        zoomreset,      {.f =  0} },
-	{ ControlMask|ShiftMask, XK_C,          clipcopy,      {.i =  0} },
-	{ ControlMask|ShiftMask, XK_V,          clippaste,     {.i =  0} },
-	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
-	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ Mod1Mask,		XK_k,           kscrollup,      {.i =  1} },
-	{ TERMMOD,		XK_K,           kscrollup,      {.i =  3} },
-	{ Mod1Mask,		XK_j,           kscrolldown,    {.i =  1} },
-	{ TERMMOD,		XK_J,           kscrolldown,    {.i =  3} },
+	{ XK_ANY_MOD,             XK_Break,       sendbreak,      {.i =  0} },
+	{ ControlMask,            XK_Print,       toggleprinter,  {.i =  0} },
+	{ ShiftMask,              XK_Print,       printscreen,    {.i =  0} },
+	{ XK_ANY_MOD,             XK_Print,       printsel,       {.i =  0} },
+	{ ControlMask,         	  XK_equal,       zoom,           {.f = +2} },
+	{ ControlMask,            XK_minus,       zoom,           {.f = -2} },
+	{ ControlMask|ShiftMask,  XK_equal,	      zoomreset,      {.f =  0} },
+	{ ControlMask|ShiftMask,  XK_C,           clipcopy,       {.i =  0} },
+	{ ControlMask|ShiftMask,  XK_V,           clippaste,      {.i =  0} },
+	{ TERMMOD,                XK_Y,           selpaste,       {.i =  0} },
+	{ ShiftMask,              XK_Insert,      selpaste,       {.i =  0} },
+	{ TERMMOD,                XK_Num_Lock,    numlock,        {.i =  0} },
+	{ Mod1Mask,		            XK_k,           kscrollup,      {.i =  1} },
+	{ TERMMOD,		            XK_K,           kscrollup,      {.i =  3} },
+	{ Mod1Mask,		            XK_j,           kscrolldown,    {.i =  1} },
+	{ TERMMOD,		            XK_J,           kscrolldown,    {.i =  3} },
 };
 
 /*
