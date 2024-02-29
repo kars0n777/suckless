@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mononoki Nerd Font-Regular:pixelsize=16:antialias=true:autohint=true";
-static char *font2  = "mononoki Nerd Font-Bold:pixelsize=16:antialias=true:autohint=true";
-static char *font3  = "mononoki Nerd Font-Italic:pixelsize=16:antialias=true:autohint=true";
-static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=16:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font-Regular:pixelsize=14:antialias=true:autohint=true";
+static char *font2  = "mononoki Nerd Font-Bold:pixelsize=14:antialias=true:autohint=true";
+static char *font3  = "mononoki Nerd Font-Italic:pixelsize=14:antialias=true:autohint=true";
+static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -299,16 +299,16 @@ static Key key[] = {
 	{ XK_KP_Subtract,   XK_ANY_MOD,     "\033Om",       +2,    0},
 	{ XK_KP_Decimal,    XK_ANY_MOD,     "\033On",       +2,    0},
 	{ XK_KP_Divide,     XK_ANY_MOD,     "\033Oo",       +2,    0},
-	{ XK_KP_0,          XK_ANY_MOD,     "\033Op",       +2,    0},
-	{ XK_KP_1,          XK_ANY_MOD,     "\033Oq",       +2,    0},
-	{ XK_KP_2,          XK_ANY_MOD,     "\033Or",       +2,    0},
-	{ XK_KP_3,          XK_ANY_MOD,     "\033Os",       +2,    0},
-	{ XK_KP_4,          XK_ANY_MOD,     "\033Ot",       +2,    0},
-	{ XK_KP_5,          XK_ANY_MOD,     "\033Ou",       +2,    0},
-	{ XK_KP_6,          XK_ANY_MOD,     "\033Ov",       +2,    0},
-	{ XK_KP_7,          XK_ANY_MOD,     "\033Ow",       +2,    0},
-	{ XK_KP_8,          XK_ANY_MOD,     "\033Ox",       +2,    0},
-	{ XK_KP_9,          XK_ANY_MOD,     "\033Oy",       +2,    0},
+//	{ XK_KP_0,          XK_ANY_MOD,     "\033Op",       +2,    0},
+//	{ XK_KP_1,          XK_ANY_MOD,     "\033Oq",       +2,    0},
+//	{ XK_KP_2,          XK_ANY_MOD,     "\033Or",       +2,    0},
+//	{ XK_KP_3,          XK_ANY_MOD,     "\033Os",       +2,    0},
+//	{ XK_KP_4,          XK_ANY_MOD,     "\033Ot",       +2,    0},
+//	{ XK_KP_5,          XK_ANY_MOD,     "\033Ou",       +2,    0},
+//	{ XK_KP_6,          XK_ANY_MOD,     "\033Ov",       +2,    0},
+//	{ XK_KP_7,          XK_ANY_MOD,     "\033Ow",       +2,    0},
+//	{ XK_KP_8,          XK_ANY_MOD,     "\033Ox",       +2,    0},
+//	{ XK_KP_9,          XK_ANY_MOD,     "\033Oy",       +2,    0},
 	{ XK_Up,            ShiftMask,      "\033[1;2A",     0,    0},
 	{ XK_Up,            Mod1Mask,       "\033[1;3A",     0,    0},
 	{ XK_Up,         ShiftMask|Mod1Mask,"\033[1;4A",     0,    0},
