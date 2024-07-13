@@ -240,7 +240,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	   XK_s,      showbar,     { .i = 1 } },
 
 	/* Unique functionality */
-	/*{ MODKEY|ShiftMask,  XK_period,       spawn,       OPENTERMSOFT("_TABBED_SELECT_TERMAPP") },
+	{ MODKEY|ShiftMask,    XK_period,       spawn,       OPENTERMSOFT("_TABBED_SELECT_TERMAPP") },
 	{ MODKEY|ShiftMask,    XK_slash,        spawn,       OPENTERM("_TABBED_TERM") },
 	{ MODKEY|ShiftMask,    XK_a,	        spawn,       ATTACHWIN("_TABBED_ATTACH_WIN") },
 	{ MODKEY|ShiftMask,    XK_s,	        spawn,       ATTACHSELECTWIN("_TABBED_ATTACH_WIN") },
@@ -249,7 +249,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    XK_minus,        spawn,       DETACHALL("_TABBED_DETACH_ALL") },
 	{ MODKEY|ShiftMask,    XK_bracketleft,  spawn,       HIDEWINDOW("_TABBED_HIDE_WINDOW") },
 	{ MODKEY|ShiftMask,    XK_bracketright, spawn,       SHOWHIDDEN("_TABBED_SHOW_HIDDEN") },
-	{ MODKEY|ShiftMask,    XK_backslash,    spawn,       SHOWHIDDENALL("_TABBED_SHOW_HIDDEN_ALL") },*/
+	{ MODKEY|ShiftMask,    XK_backslash,    spawn,       SHOWHIDDENALL("_TABBED_SHOW_HIDDEN_ALL") },
 };
 
 static Key keyreleases[] = {

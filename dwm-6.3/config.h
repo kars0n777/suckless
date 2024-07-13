@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* appearance */
+/* appearance */ 
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 8;       /* gaps between windows */
 static const unsigned int snap      = 0;        /* snap pixel */
@@ -37,7 +37,6 @@ static const Rule rules[] = {
 	/* class                  instance    title       tags mask     isfloating   monitor */
 	{ "rustdesk",	  NULL,			NULL,		0,				1,			 -1 },
 	{ "Rustdesk",	  NULL,			NULL,		0,				1,			 -1 },
-	{ "chatterino",	  NULL,			NULL,		0,				1,			 -1 },
 };
 
 /* layout(s) */
@@ -61,7 +60,7 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ Mod1Mask,           			KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|Mod1Mask,           			KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
@@ -82,9 +81,9 @@ static Key keys[] = {
   { ControlMask|Mod1Mask,           XK_s,      spawn,          {.v = sxhkdcmd} },
   { MODKEY,                         XK_BackSpace, togglebar,   {0} },
   { MODKEY,                         XK_t,      focusstack,     {.i = +1 } },
-  { MODKEY,                         XK_j,      focusstack,     {.i = +1 } },
+  { MODKEY,                         XK_k,      focusstack,     {.i = +1 } },
   { MODKEY,	            	          XK_g,      focusstack,     {.i = -1 } },
-  { MODKEY,	            	          XK_k,      focusstack,     {.i = -1 } },
+  { MODKEY,	            	          XK_j,      focusstack,     {.i = -1 } },
   { MODKEY,                         XK_a,      setmfact,       {.f = -0.05} },
   { MODKEY,                         XK_d,      setmfact,       {.f = +0.05} },
   { MODKEY,                         XK_space,  zoom,           {0} },
@@ -103,6 +102,10 @@ static Key keys[] = {
   { MODKEY,                         XK_x,      focusmon,       {.i = +1 } },
   { MODKEY|ShiftMask,               XK_z,      tagmon,         {.i = -1 } },
   { MODKEY|ShiftMask,               XK_x,      tagmon,         {.i = +1 } },
+  { MODKEY,                         XK_h,      focusmon,       {.i = -1 } },
+  { MODKEY,                         XK_l,      focusmon,       {.i = +1 } },
+  { MODKEY|ShiftMask,               XK_h,      tagmon,         {.i = -1 } },
+  { MODKEY|ShiftMask,               XK_l,      tagmon,         {.i = +1 } },
   { MODKEY,                         XK_equal,  setgaps,        {.i = -4 } },
   { MODKEY,                         XK_minus,  setgaps,        {.i = +4 } },
   { MODKEY|ShiftMask,               XK_equal,  setgaps,        {.i = 0 } },
