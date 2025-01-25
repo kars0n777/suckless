@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mononoki Nerd Font-Regular:pixelsize=20:antialias=true:autohint=true";
-static char *font2  = "mononoki Nerd Font-Bold:pixelsize=20:antialias=true:autohint=true";
-static char *font3  = "mononoki Nerd Font-Italic:pixelsize=20:antialias=true:autohint=true";
-static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=20:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font-Regular:pixelsize=18:antialias=true:autohint=true";
+static char *font2  = "mononoki Nerd Font-Bold:pixelsize=18:antialias=true:autohint=true";
+static char *font3  = "mononoki Nerd Font-Italic:pixelsize=18:antialias=true:autohint=true";
+static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -97,7 +97,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -202,9 +202,9 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,              XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,             XK_Print,       printsel,       {.i =  0} },
 	{ ControlMask,         	  XK_equal,       zoom,           {.f = +2} },
-	{ ControlMask,            XK_minus,       zoom,           {.f = -2} },
+              { ControlMask,            XK_minus,       zoom,           {.f = -2} },
 	{ ControlMask|ShiftMask,  XK_equal,	      zoomreset,      {.f =  0} },
-	{ ControlMask|ShiftMask,  XK_C,           clipcopy,       {.i =  0} },
+          { ControlMask|ShiftMask,  XK_C,           clipcopy,       {.i =  0} },
 	{ ControlMask|ShiftMask,  XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,                XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,              XK_Insert,      selpaste,       {.i =  0} },

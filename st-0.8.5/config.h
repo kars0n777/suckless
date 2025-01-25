@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mononoki Nerd Font-Regular:pixelsize=20:antialias=true:autohint=true";
-static char *font2  = "mononoki Nerd Font-Bold:pixelsize=20:antialias=true:autohint=true";
-static char *font3  = "mononoki Nerd Font-Italic:pixelsize=20:antialias=true:autohint=true";
-static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=20:antialias=true:autohint=true";
+static char *font = "mononoki Nerd Font-Regular:pixelsize=18:antialias=true:autohint=true";
+static char *font2  = "mononoki Nerd Font-Bold:pixelsize=18:antialias=true:autohint=true";
+static char *font3  = "mononoki Nerd Font-Italic:pixelsize=18:antialias=true:autohint=true";
+static char *font4  = "mononoki Nerd Font-Bold Italic:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -97,7 +97,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {

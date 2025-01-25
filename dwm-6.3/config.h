@@ -54,6 +54,7 @@ static const Layout layouts[] = {
 	{ "",      horizgrid },
 	{ "TTT",      bstack },
 	{ "",      bstackhoriz },
+	{ "󱪷",      horizontal },
 };
 
 /* key definitions */
@@ -94,18 +95,19 @@ static Key keys[] = {
   /*	{ Mod1Mask|ShiftMask,           XK_g,      setlayout,      {.v = &layouts[2]} },*/
   { MODKEY|ShiftMask, 			        XK_g,      setlayout,      {.v = &layouts[3]} },
   { Mod1Mask|ShiftMask,			        XK_g,	     setlayout,      {.v = &layouts[5]} },
+  { ControlMask|MODKEY,			        XK_g,	     setlayout,      {.v = &layouts[6]} },
   /*	{ MODKEY|ShiftMask,             XK_f, 	   setlayout,      {0} },*/
   /*	{ MODKEY|ShiftMask,	            XK_f,      togglefloating, {0} },*/
   { MODKEY,                         XK_s,      view,           {.ui = ~0 } },
   { MODKEY|ShiftMask,               XK_s,      tag,            {.ui = ~0 } },
-  { MODKEY,                         XK_z,      focusmon,       {.i = -1 } },
-  { MODKEY,                         XK_x,      focusmon,       {.i = +1 } },
-  { MODKEY|ShiftMask,               XK_z,      tagmon,         {.i = -1 } },
-  { MODKEY|ShiftMask,               XK_x,      tagmon,         {.i = +1 } },
-  { MODKEY,                         XK_h,      focusmon,       {.i = -1 } },
-  { MODKEY,                         XK_l,      focusmon,       {.i = +1 } },
-  { MODKEY|ShiftMask,               XK_h,      tagmon,         {.i = -1 } },
-  { MODKEY|ShiftMask,               XK_l,      tagmon,         {.i = +1 } },
+  { MODKEY,                         XK_x,      focusmon,       {.i = -1 } },
+  { MODKEY,                         XK_z,      focusmon,       {.i = +1 } },
+  { MODKEY|ShiftMask,               XK_x,      tagmon,         {.i = -1 } },
+  { MODKEY|ShiftMask,               XK_z,      tagmon,         {.i = +1 } },
+  { MODKEY,                         XK_l,      focusmon,       {.i = -1 } },
+  { MODKEY,                         XK_h,      focusmon,       {.i = +1 } },
+  { MODKEY|ShiftMask,               XK_l,      tagmon,         {.i = -1 } },
+  { MODKEY|ShiftMask,               XK_h,      tagmon,         {.i = +1 } },
   { MODKEY,                         XK_equal,  setgaps,        {.i = -4 } },
   { MODKEY,                         XK_minus,  setgaps,        {.i = +4 } },
   { MODKEY|ShiftMask,               XK_equal,  setgaps,        {.i = 0 } },
